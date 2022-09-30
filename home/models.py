@@ -1,4 +1,3 @@
-
 from django.db import models
 
 class Familia(models.Model):
@@ -7,4 +6,3 @@ class Familia(models.Model):
     edad = models.IntegerField()
     sexo = models.CharField(max_length=10)
     fecha_nacimiento = models.DateTimeField(null=True)
-    

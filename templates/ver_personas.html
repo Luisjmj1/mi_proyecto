@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
+    <p> Listado de personas </p>
+
+
+    {% for persona in personas  %}
+         <li>{{persona}}</li>
+    {% endfor %}
+
+
 </body>
 </html>

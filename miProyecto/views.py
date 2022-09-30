@@ -1,4 +1,16 @@
 from django.http import HttpResponse
+from datetime import datetime
+from django.template import Context, Template, loader
+import random
 
-def hola(request):
-    return HttpResponse("Hola Soy una pagina")
+from home.models import Persona
+
+
+def crear_personas(request):
+    return HttpResponse('')
+
+def ver_personas(request):
+    
+    Persona
+    
+    return HttpResponse('')

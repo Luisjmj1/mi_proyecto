@@ -19,7 +19,7 @@ def hola(request):
 
 def crear_familia(request):
     
-    familia = Familia.objects.all()
+    familias = Familia.objects.all()
     
     familia1 = Familia(nombre='Lola', apellido='Mento', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
     familia2 = Familia(nombre='Dolores', apellido='Delano', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())

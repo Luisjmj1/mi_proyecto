@@ -17,21 +17,13 @@ def hola(request):
     return HttpResponse('Holaaaaaaaaaaaaaaaaaaa')
 
 
-def crear_familia(request):
+def crear_familia(request, nombre, apellido):
     
-    familias = Familia.objects.all()
-    
-    familia1 = Familia(nombre='Lola', apellido='Mento', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    familia2 = Familia(nombre='Dolores', apellido='Delano', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    familia3 = Familia(nombre='Pere', apellido='Gil', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    familia4 = Familia(nombre='kai', apellido='Parada', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    familia1.save()
-    familia2.save()
-    familia3.save()
-    familia4.save()
+    familia = Familia(nombre=nombre, apellido=apellido, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    familia.save()
     
     template = loader.get_template('crear_familia.html')
-    template_renderizado = template.render({})
+    template_renderizado = template.render({'familia': familia})
     
     return HttpResponse(template_renderizado)
 
@@ -40,7 +32,7 @@ def crear_familia(request):
 
 def ver_personas(request):
     
-    personas = Persona.objects.all()
+    personas = Familia.objects.all()
     
     template = loader.get_template('ver_personas.html')
     template_renderizado = template.render({'personas': personas})

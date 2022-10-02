@@ -16,6 +16,25 @@ def hola(request):
     return HttpResponse('Holaaaaaaaaaaaaaaaaaaa')
 
 
+def crear_familia(request):
+    
+    persona1 = Persona(nombre=Luis, apellido=Moreno, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona2 = Persona(nombre=Freddy, apellido=Druguer, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona3 = Persona(nombre=Rosame, apellido=Eltrozo, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona4 = Persona(nombre=Caia, apellido=Parada, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona1.save()
+    persona2.save()
+    persona3.save()
+    persona4.save()
+    
+    template = loader.get_template('crear_familia.html')
+    template_renderizado = template.render({})
+    
+    return HttpResponse(template_renderizado)
+
+
+
+
 def ver_personas(request):
     
     personas = Persona.objects.all()

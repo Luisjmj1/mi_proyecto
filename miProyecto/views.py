@@ -18,10 +18,10 @@ def hola(request):
 
 def crear_familia(request):
     
-    persona1 = Persona(nombre=Luis, apellido=Moreno, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    persona2 = Persona(nombre=Freddy, apellido=Druguer, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    persona3 = Persona(nombre=Rosame, apellido=Eltrozo, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
-    persona4 = Persona(nombre=Caia, apellido=Parada, edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona1 = Persona(nombre='Lola', apellido='Mento', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona2 = Persona(nombre='Dolores', apellido='Delano', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona3 = Persona(nombre='Pere', apellido='Gil', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
+    persona4 = Persona(nombre='kai', apellido='Parada', edad=random.randrange(1, 99), fecha_nacimiento=datetime.now())
     persona1.save()
     persona2.save()
     persona3.save()
